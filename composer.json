@@ -7,6 +7,11 @@
             "email": "social@leon-witlif.de"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "LeonWitlif\\SpaceTraders\\ModelParser\\": "src/"
+        }
+    },
     "require": {
         "php": "^8.4"
     },
