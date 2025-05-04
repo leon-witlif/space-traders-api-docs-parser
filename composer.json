@@ -1,0 +1,16 @@
+{
+    "name": "leon-witlif/space-traders-model-parser",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Leon Witlif",
+            "email": "social@leon-witlif.de"
+        }
+    ],
+    "require": {
+        "php": "^8.4"
+    },
+    "scripts": {
+        "parse": "@php -f parser.php ../api-docs/models ./out"
+    }
+}
