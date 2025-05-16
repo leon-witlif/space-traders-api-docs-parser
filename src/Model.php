@@ -84,6 +84,11 @@ class Model
         return self::isClassType($this) ? $this->model->properties : new \stdClass();
     }
 
+    public function getEnumCases(): array
+    {
+        return $this->model->enum;
+    }
+
     public function getRequiredProperties(): array
     {
         return self::isClassType($this) ? $this->model->required ?? [] : [];

@@ -1,5 +1,5 @@
 {
-    "name": "leon-witlif/space-traders-model-parser",
+    "name": "leon-witlif/space-traders-api-docs-parser",
     "type": "project",
     "authors": [
         {
@@ -13,9 +13,14 @@
         }
     },
     "require": {
-        "php": "^8.4"
+        "php": "^8.4",
+        "ext-mbstring": "^8.4"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.2"
     },
     "scripts": {
-        "parse": "@php -f parser.php ../api-docs/models ./out"
+        "model": "@php -f parser.php ../api-docs/models ./out",
+        "api": "@php -f api.php ../api-docs/reference/SpaceTraders.json"
     }
 }

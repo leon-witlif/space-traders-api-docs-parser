@@ -20,12 +20,14 @@ class ClassType
         }
     }
 
-    public function render(): string
+    public function render(callable $namespaceCallback): string
     {
         return <<<PHP
 <?php
 
 declare(strict_types=1);
+
+namespace {$namespaceCallback($this->name)};
 
 readonly class $this->name
 {
